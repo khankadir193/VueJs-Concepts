@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="hi i am abdul kadir khan i am from parent component.."/>
+  <InterpolationComp inter="hi this is interpolation topics..." />
+  <methodComp />
+  <eventComp />
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import InterpolationComp from './components/InterpolationComp.vue';
+import methodComp from './components/methodComp.vue';
+import eventComp from './components/eventComp.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    InterpolationComp,
+    methodComp,
+    eventComp
   }
 }
 </script>
