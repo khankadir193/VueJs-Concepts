@@ -3,6 +3,13 @@
   <InterpolationComp inter="hi this is interpolation topics..." />
   <methodComp />
   <eventComp />
+  <CounterComp />
+  <TwoWayBinding />
+  <inputValue />
+  <checkbxRadio />
+  <ifElseCondition />
+  <forLoopComp />
+  <ParentComp />
   
 </template>
 
@@ -11,6 +18,13 @@ import HelloWorld from './components/HelloWorld.vue';
 import InterpolationComp from './components/InterpolationComp.vue';
 import methodComp from './components/methodComp.vue';
 import eventComp from './components/eventComp.vue';
+import CounterComp from './components/CounterComp.vue';
+import TwoWayBinding from './components/TwoWayBinding.vue';
+import inputValue from './components/inputValue.vue';
+import checkbxRadio from './components/checkbxRadio.vue';
+import ifElseCondition from './components/ifElseCondition.vue';
+import forLoopComp from './components/forLoopComp.vue';
+import ParentComp from './components/ParentComp.vue';
 
 export default {
   name: 'App',
@@ -18,7 +32,14 @@ export default {
     HelloWorld,
     InterpolationComp,
     methodComp,
-    eventComp
+    eventComp,
+    CounterComp,
+    TwoWayBinding,
+    inputValue,
+    checkbxRadio,
+    ifElseCondition,
+    forLoopComp,
+    ParentComp
   }
 }
 </script>
