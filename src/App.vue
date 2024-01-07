@@ -10,6 +10,9 @@
   <ifElseCondition />
   <forLoopComp />
   <ParentComp />
+  <UserParent />
+  <HtmlBinding />
+  <ClassBinding />
   
 </template>
 
@@ -25,6 +28,9 @@ import checkbxRadio from './components/checkbxRadio.vue';
 import ifElseCondition from './components/ifElseCondition.vue';
 import forLoopComp from './components/forLoopComp.vue';
 import ParentComp from './components/ParentComp.vue';
+import UserParent from './components/UserParent.vue';
+import HtmlBinding from './components/HtmlBinding.vue';
+import ClassBinding from './components/ClassBinding.vue';
 
 export default {
   name: 'App',
@@ -39,7 +45,10 @@ export default {
     checkbxRadio,
     ifElseCondition,
     forLoopComp,
-    ParentComp
+    ParentComp,
+    UserParent,
+    HtmlBinding,
+    ClassBinding
   }
 }
 </script>
