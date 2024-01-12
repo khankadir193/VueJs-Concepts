@@ -13,6 +13,7 @@
   <UserParent />
   <HtmlBinding />
   <ClassBinding />
+  <UserToParentTop />
   
 </template>
 
@@ -31,6 +32,7 @@ import ParentComp from './components/ParentComp.vue';
 import UserParent from './components/UserParent.vue';
 import HtmlBinding from './components/HtmlBinding.vue';
 import ClassBinding from './components/ClassBinding.vue';
+import UserToParentTop from './components/UserToParentTop.vue';
 
 export default {
   name: 'App',
@@ -48,7 +50,8 @@ export default {
     ParentComp,
     UserParent,
     HtmlBinding,
-    ClassBinding
+    ClassBinding,
+    UserToParentTop
   }
 }
 </script>
