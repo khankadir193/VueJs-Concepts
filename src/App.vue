@@ -14,6 +14,8 @@
   <HtmlBinding />
   <ClassBinding />
   <UserToParentTop />
+  <refComponent />
+  <FormComponent />
   
 </template>
 
@@ -33,6 +35,10 @@ import UserParent from './components/UserParent.vue';
 import HtmlBinding from './components/HtmlBinding.vue';
 import ClassBinding from './components/ClassBinding.vue';
 import UserToParentTop from './components/UserToParentTop.vue';
+import refComponent from './components/refComponent.vue';
+import FormComponent from './components/formComponent.vue';
+
+
 
 export default {
   name: 'App',
@@ -51,7 +57,9 @@ export default {
     UserParent,
     HtmlBinding,
     ClassBinding,
-    UserToParentTop
+    UserToParentTop,
+    refComponent,
+    FormComponent
   }
 }
 </script>
