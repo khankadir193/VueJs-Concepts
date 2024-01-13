@@ -45,11 +45,22 @@ export default {
                 country:'',
                 technology:[],
                 gender:''
-            }
+            },
+            error:[]
         }
     },
     methods: {
         login() {
+            this.error = []
+            for(const item in this.form){
+                if(this.form[item] === "" || this.form[item].lengthn === 0){
+                    this.error.push(item);
+                }
+            }
+
+            if(this.error.length === 0){
+                alert('data is submitted..');
+            }
             console.log('form..??',this.form);
         }
     }
