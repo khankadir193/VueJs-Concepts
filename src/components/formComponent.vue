@@ -1,7 +1,22 @@
 <template>
 <h1>This topic is regarding form</h1>
 <h2>Simple Form</h2>
-<h2>{{ form }}</h2>
+<!-- <h2>{{ form }}</h2> -->
+
+<ul>
+    <li>{{ form.email }}</li>
+    <li>{{ form.password }}</li>
+    <li>{{ form.country }}</li>
+    <li>{{ form.technology }}</li>
+    <li>{{ form.gender }}</li>
+</ul>
+
+
+<!-- showing fields valid or not -->
+<ul v-for="item in error" v-bind:key="item">
+    <li>{{ item }} are not valid.</li>
+</ul>
+
 <label>Email:</label><br><br>
 <input type="text" placeholder="enter your email" v-model="form.email"/>
 <br><br>
@@ -53,15 +68,15 @@ export default {
         login() {
             this.error = []
             for(const item in this.form){
-                if(this.form[item] === "" || this.form[item].lengthn === 0){
+                if(this.form[item] === "" || this.form[item].length === 0){
                     this.error.push(item);
                 }
             }
 
-            if(this.error.length === 0){
-                alert('data is submitted..');
+            if(this.error.length === 0 ){
+                alert('data has been submitted.....');
             }
-            console.log('form..??',this.form);
+            console.log('form..??',this.form,'this.error....',this.error);
         }
     }
 }
