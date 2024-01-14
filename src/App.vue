@@ -17,6 +17,7 @@
   <refComponent />
   <FormComponent />
   <formModifierComponent />
+  <nonPropsParent />
   
 </template>
 
@@ -39,6 +40,7 @@ import UserToParentTop from './components/UserToParentTop.vue';
 import refComponent from './components/refComponent.vue';
 import FormComponent from './components/formComponent.vue';
 import formModifierComponent from './components/formModifierComponent.vue';
+import nonPropsParent from './components/non-PropsParent.vue';
 
 
 
@@ -62,7 +64,8 @@ export default {
     UserToParentTop,
     refComponent,
     FormComponent,
-    formModifierComponent
+    formModifierComponent,
+    nonPropsParent
   }
 }
 </script>
