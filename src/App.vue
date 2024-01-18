@@ -18,6 +18,9 @@
   <FormComponent />
   <formModifierComponent />
   <nonPropsParent />
+  <computedProperty />
+  <WatcherComponent />
+
   
 </template>
 
@@ -41,8 +44,8 @@ import refComponent from './components/refComponent.vue';
 import FormComponent from './components/formComponent.vue';
 import formModifierComponent from './components/formModifierComponent.vue';
 import nonPropsParent from './components/non-PropsParent.vue';
-
-
+import computedProperty from './components/computedProperty.vue';
+import WatcherComponent from './components/WatcherComponent.vue';
 
 export default {
   name: 'App',
@@ -65,7 +68,9 @@ export default {
     refComponent,
     FormComponent,
     formModifierComponent,
-    nonPropsParent
+    nonPropsParent,
+    computedProperty,
+    WatcherComponent
   }
 }
 </script>
