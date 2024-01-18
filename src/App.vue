@@ -20,6 +20,7 @@
   <nonPropsParent />
   <computedProperty />
   <WatcherComponent />
+  <SlotParentComp />
 
   
 </template>
@@ -46,6 +47,7 @@ import formModifierComponent from './components/formModifierComponent.vue';
 import nonPropsParent from './components/non-PropsParent.vue';
 import computedProperty from './components/computedProperty.vue';
 import WatcherComponent from './components/WatcherComponent.vue';
+import SlotParentComp from './components/SlotParentComp.vue';
 
 export default {
   name: 'App',
@@ -70,7 +72,8 @@ export default {
     formModifierComponent,
     nonPropsParent,
     computedProperty,
-    WatcherComponent
+    WatcherComponent,
+    SlotParentComp
   }
 }
 </script>
