@@ -8,9 +8,9 @@
     <img src="https://hips.hearstapps.com/hmg-prod/images/beautiful-smooth-haired-red-cat-lies-on-the-sofa-royalty-free-image-1678488026.jpg?crop=0.88847xw:1xh;center,top&resize=1200:*" alt="">
 </SlotChildComp>
 
-<h1>Multiple Slots By Name</h1>
+<h1 class="slot">Multiple Slots By Name</h1>
 <!-- multiple slot by name -->
-<SlotChildComp>
+<multipleSlotComp>
     <template v-slot:header>
         <h2>First Parameter</h2>
     </template>
@@ -20,21 +20,21 @@
     <template v-slot:footer>
         <button>Apply</button>
     </template>
-</SlotChildComp>
+</multipleSlotComp>
 
-<SlotChildComp>
+<multipleSlotComp>
     <template v-slot:header>
         <h2>Second Parameter</h2>
     </template>
     <template v-slot:main>
-        <p>This is the main second component</p>
+        <h3>This is the main second component</h3>
     </template>
     <template v-slot:footer>
         <button>Btn</button>
     </template>
-</SlotChildComp>
+</multipleSlotComp>
 
-<SlotChildComp>
+<multipleSlotComp>
     <template v-slot:header>
         <h2>Third Parameter</h2>
     </template>
@@ -44,16 +44,18 @@
     <template v-slot:footer>
         <button>Buttons</button>
     </template>
-</SlotChildComp>
+</multipleSlotComp>
 </template>
 
 <script>
 import SlotChildComp from './SlotChildComp.vue';
+import multipleSlotComp from './multipleSlotComp.vue';
 
 export default{
     name:'SlotParentComp',
     components:{
-        SlotChildComp
+        SlotChildComp,
+        multipleSlotComp
     }
 }
 </script>
@@ -62,5 +64,11 @@ export default{
 h1{
     background-color: rgb(78, 78, 4);
     color: white;
+}
+.slot{
+    background-color:brown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    font-style: italic;
 }
 </style>

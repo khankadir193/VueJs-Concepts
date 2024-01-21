@@ -1,28 +1,24 @@
 <template>
-    <h2>{{ data }}</h2>
-    <slot></slot>
-
-    <!-- multiple slot by name example -->
-   <!-- <div class="slot-container">
+    <!-- <h1>This is the multiple Slot child component</h1> -->
+   <div class="slot-container">
         <slot name="header"></slot>
         <slot name="main"></slot>
         <slot name="footer"></slot>
 
-    </div>  -->
+    </div> 
 </template>
 
 <script>
 export default {
-    name: 'SlotChildComp',
-    props: {
-        data: String
-    }
+    name:"multipleSlotComp"
 }
+
 </script>
+
 
 <style scoped>
 h1 {
-    background-color: rgb(78, 78, 4);
+    background-color: rgb(153, 15, 134);
 }
 .slot-container{
     border: 1px solid blue;
@@ -32,5 +28,9 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    margin: 1rem;
 }
+
+
 </style>
