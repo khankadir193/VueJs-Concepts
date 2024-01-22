@@ -21,6 +21,7 @@
   <computedProperty />
   <WatcherComponent />
   <SlotParentComp />
+  <ApiCall />  
 
   
 </template>
@@ -48,6 +49,7 @@ import nonPropsParent from './components/non-PropsParent.vue';
 import computedProperty from './components/computedProperty.vue';
 import WatcherComponent from './components/WatcherComponent.vue';
 import SlotParentComp from './components/SlotParentComp.vue';
+import ApiCall from './components/ApiCall.vue';
 
 export default {
   name: 'App',
@@ -73,7 +75,8 @@ export default {
     nonPropsParent,
     computedProperty,
     WatcherComponent,
-    SlotParentComp
+    SlotParentComp,
+    ApiCall
   }
 }
 </script>
