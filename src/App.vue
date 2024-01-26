@@ -22,6 +22,7 @@
   <WatcherComponent />
   <SlotParentComp />
   <ApiCall />  
+  <HtmlValidation />
 
   
 </template>
@@ -50,6 +51,7 @@ import computedProperty from './components/computedProperty.vue';
 import WatcherComponent from './components/WatcherComponent.vue';
 import SlotParentComp from './components/SlotParentComp.vue';
 import ApiCall from './components/ApiCall.vue';
+import HtmlValidation from './components/HtmlValidation.vue';
 
 export default {
   name: 'App',
@@ -76,7 +78,8 @@ export default {
     computedProperty,
     WatcherComponent,
     SlotParentComp,
-    ApiCall
+    ApiCall,
+    HtmlValidation
   }
 }
 </script>
