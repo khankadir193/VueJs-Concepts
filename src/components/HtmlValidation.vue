@@ -19,38 +19,42 @@
             <span v-if="!isUserNameValid" class="error-message">UserName is required</span>
             
             <label>Email(Optional)</label>
-            <input type="email" placeholder="enter your mail" v-model="isEmailValid" :class="{'error' : !isEmailValid}" >
+            <input type="email" placeholder="enter your mail" v-model="email" :class="{'error' : !isEmailValid}" >
             <span v-if="!isEmailValid" class="error-message">Email is required</span>
 
             <label>Address</label>
-            <input type="address" placeholder="enter your address" v-model="isAddressValid" :class="{'error' : !isAddressValid}">
+            <input type="address" placeholder="enter your address" v-model="address" :class="{'error' : !isAddressValid}">
             <span v-if="!isAddressValid" class="error-message">Address is required</span>
 
         </div>
         <div class="option-container">
             <div class="first-opt">
                 <label for="country">Country</label>
-                <select name="select" id="options">
+                <select name="select" id="options" v-model="country">
                     <option value="india">india</option>
                     <option value="pakistan">pakistan</option>
                     <option value="china">china</option>
                     <option value="bangladesh">bangladesh</option>
                 </select>
+                <span v-if="!isCountryValid" class="error-message">Country is required</span>
             </div>
 
             <div class="second-opt" >
                 <label for="state">State</label>
-                <select name="select" id="options">
+                <select name="select" id="options" v-model="state">
                     <option value="Uttarpradesh">Uttarpradesh</option>
                     <option value="MadhyaPradesh">MadhyaPradesh</option>
                     <option value="Maharashra">Maharashra</option>
                     <option value="Delhi">Delhi</option>
                 </select>
+                <span v-if="!isStateValid" class="error-message">State is required</span>
             </div>
 
             <div class="third-opt" >
                 <label for="country">Zip</label>
-                <input type="text">
+                <input type="text" placeholder="enter your zip code" v-model="zip">
+                <span v-if="!isZipCodeValid" class="error-message">ZipCode is required</span>
+
             </div>
         </div>
         <button type="submit">Submit</button>
@@ -71,7 +75,13 @@ export default {
             email:'',
             isEmailValid:false,
             address:'',
-            isAddressValid:false
+            isAddressValid:false,
+            country:'',
+            isCountryValid:false,
+            state:'',
+            isStateValid:false,
+            zip:'',
+            isZipCodeValid:false
         }
     },
     methods:{
@@ -81,10 +91,13 @@ export default {
             this.isUserNameValid = !!this.userName.trim();
             this.isEmailValid = !!this.email.trim();
             this.isAddressValid = !!this.address.trim();
+            this.isCountryValid = !!this.country.trim();
+            this.isStateValid = !!this.state.trim();
+            this.isZipCodeValid = !!this.zip.trim();
 
 
             // this.isNameValid = true;
-            if(this.isNameValid && this.isLastNameValid && this.isUserNameValid && this.isEmailValid && this.isAddressValid){
+            if(this.isNameValid && this.isLastNameValid && this.isUserNameValid && this.isEmailValid && this.isAddressValid && this.isCountryValid && this.isStateValid && this.isZipCodeValid){
                 console.log('form submitted is successfully....');
             }
         }
@@ -95,6 +108,7 @@ export default {
 <style scoped>
 h1 {
     background-color: rgb(7, 109, 156);
+    color: white;
 }
 
 .name-container {
