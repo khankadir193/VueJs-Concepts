@@ -1,23 +1,31 @@
 <template>
     <h1>This concept is the html validation</h1>
-    <form action="post">
+    <form @submit.prevent="submitForm">
         <div class="name-container">
             <div class="first">
                 <label>First Name</label>
-                <input type="text">
+                <input type="text" placeholder="enter your first name" v-model="name" :class="{'error' : !isNameValid}">
+                <span v-if="!isNameValid" class="error-message">Name is required</span>
             </div>
             <div class="second">
                 <label>Last Name</label>
-                <input type="name" placeholder="">
+                <input type="name" placeholder="enter your last name" v-model="lastName" :class="{'error' : !isLastNameValid}">
+                <span v-if="!isLastNameValid" class="error-message">LastName is required</span>
             </div>
         </div>
         <div class="userName-container">
             <label>User Name</label>
-            <input type="name" placeholder="Username">
+            <input type="name" placeholder="enter your last Username" v-model="userName" :class="{'error' : !isUserNameValid}" >
+            <span v-if="!isUserNameValid" class="error-message">UserName is required</span>
+            
             <label>Email(Optional)</label>
-            <input type="email" placeholder="enter your mail">
+            <input type="email" placeholder="enter your mail" v-model="isEmailValid" :class="{'error' : !isEmailValid}" >
+            <span v-if="!isEmailValid" class="error-message">Email is required</span>
+
             <label>Address</label>
-            <input type="address" placeholder="enter your address">
+            <input type="address" placeholder="enter your address" v-model="isAddressValid" :class="{'error' : !isAddressValid}">
+            <span v-if="!isAddressValid" class="error-message">Address is required</span>
+
         </div>
         <div class="option-container">
             <div class="first-opt">
@@ -45,12 +53,42 @@
                 <input type="text">
             </div>
         </div>
+        <button type="submit">Submit</button>
     </form>
 </template>
 
 <script>
 export default {
-    name: 'HtmlValidation'
+    name: 'HtmlValidation',
+    data(){
+        return{
+            name:'',
+            isNameValid:false,
+            lastName:'',
+            isLastNameValid:false,
+            userName:'',
+            isUserNameValid:false,
+            email:'',
+            isEmailValid:false,
+            address:'',
+            isAddressValid:false
+        }
+    },
+    methods:{
+        submitForm(){
+            this.isNameValid = !!this.name.trim();
+            this.isLastNameValid = !!this.lastName.trim();
+            this.isUserNameValid = !!this.userName.trim();
+            this.isEmailValid = !!this.email.trim();
+            this.isAddressValid = !!this.address.trim();
+
+
+            // this.isNameValid = true;
+            if(this.isNameValid && this.isLastNameValid && this.isUserNameValid && this.isEmailValid && this.isAddressValid){
+                console.log('form submitted is successfully....');
+            }
+        }
+    }
 }
 </script>
 
@@ -93,8 +131,12 @@ h1 {
     align-items: flex-start;
     justify-content: center;
 }
-
-.first {
-    /* display: flex; */
+.error{
+    border-color: red;
 }
+
+.error-message{
+    color: red;
+}
+
 </style>
