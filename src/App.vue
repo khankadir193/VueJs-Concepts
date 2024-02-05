@@ -23,6 +23,7 @@
   <SlotParentComp />
   <ApiCall />  
   <HtmlValidation />
+  <DynamicComponent />
 
   
 </template>
@@ -52,6 +53,7 @@ import WatcherComponent from './components/WatcherComponent.vue';
 import SlotParentComp from './components/SlotParentComp.vue';
 import ApiCall from './components/ApiCall.vue';
 import HtmlValidation from './components/HtmlValidation.vue';
+import DynamicComponent from './components/DynamicComponent.vue';
 
 export default {
   name: 'App',
@@ -79,7 +81,8 @@ export default {
     WatcherComponent,
     SlotParentComp,
     ApiCall,
-    HtmlValidation
+    HtmlValidation,
+    DynamicComponent
   }
 }
 </script>
