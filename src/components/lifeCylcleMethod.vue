@@ -19,12 +19,21 @@ export default {
     //this life cylcle method called when nothing(data,method,property) will be 
     // create means data, method, property ready to be create.
     beforeCreate(){
-        this.name = "abdul jabir khan";
+        this.name = "abdul jabir khan"; //this will not work
         console.log('this is the before create method');
     },
+    //this method would be call after data,property,method has been created or bind
     created(){
         this.name = "abdul jabir khan";
         console.log('after data,property,method created would be called this method');
+    },
+    //this method would be called before render the ui on page.
+    beforeMount(){
+        console.log('before render UI',this.$el);
+    },
+    //this method would be called after render the UI.
+    mounted(){
+        console.log('after render UI',this.$el);
     }
 }
 
