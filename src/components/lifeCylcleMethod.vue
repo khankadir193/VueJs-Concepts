@@ -1,7 +1,10 @@
 <template>
-<div>
+<div class="container">
 <h1>This is the life cycle components</h1>
 <h2>Name {{ name }} and Age: {{ age }}</h2>
+<h2 ref="count">Counter:- {{ count }}</h2>
+<button v-on:click="count = count+1">Counter</button>
+
 </div>
 </template>
 
@@ -13,7 +16,8 @@ export default {
         console.log('this is the data method.');
         return{
             name:"Abdul Kadir Khan",
-            age:24
+            age:24,
+            count:0
         }
     },
     //this life cylcle method called when nothing(data,method,property) will be 
@@ -34,6 +38,13 @@ export default {
     //this method would be called after render the UI.
     mounted(){
         console.log('after render UI',this.$el);
+    },
+    //this method would be called after update the UI.
+    beforeUpdate(){
+        console.log('this method called befor update the UI.',this.$refs['count'].textContent);
+    },
+    updated(){
+        console.log('this method called after update UI.',this.$refs['count'].textContent);
     }
 }
 
