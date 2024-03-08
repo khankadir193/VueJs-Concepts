@@ -5,20 +5,29 @@
 <h2 ref="count">Counter:- {{ count }}</h2>
 <button v-on:click="count = count+1">Counter</button>
 
+<!-- toggle method -->
+<br><br>
+<button v-on:click="show = !show">toggleBtn</button>
+<lifeCycleChildComp v-if="show" />
 </div>
 </template>
 
 <script>
+import lifeCycleChildComp from './lifeCycleChildComp.vue';
 export default {
     name:'lifeCycleMethod',
     //beforeCreate method after call will be created this method.
     data(){
         console.log('this is the data method.');
-        return{
+        return {
             name:"Abdul Kadir Khan",
             age:24,
-            count:0
+            count:0,
+            show:true
         }
+    },
+    components:{
+        lifeCycleChildComp
     },
     //this life cylcle method called when nothing(data,method,property) will be 
     // create means data, method, property ready to be create.
