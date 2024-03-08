@@ -24,8 +24,7 @@
   <ApiCall />  
   <HtmlValidation />
   <DynamicComponent />
-
-  
+  <lifeCylcleMethod />
 </template>
 
 <script>
@@ -54,6 +53,7 @@ import SlotParentComp from './components/SlotParentComp.vue';
 import ApiCall from './components/ApiCall.vue';
 import HtmlValidation from './components/HtmlValidation.vue';
 import DynamicComponent from './components/DynamicComponent.vue';
+import lifeCylcleMethod from './components/lifeCylcleMethod.vue';
 
 export default {
   name: 'App',
@@ -82,7 +82,8 @@ export default {
     SlotParentComp,
     ApiCall,
     HtmlValidation,
-    DynamicComponent
+    DynamicComponent,
+    lifeCylcleMethod
   }
 }
 </script>
